@@ -1,0 +1,34 @@
+version: '2'
+services:
+ site1:
+  image: nginx:1.9
+  container_name: site1
+  volumes:
+  - ./index1.html:/usr/share/nginx/html/index.html
+  expose:
+  - "80"
+ site2:
+  image: nginx:1.9
+  container_name: site2
+  volumes:
+  - ./index2.html:/usr/share/nginx/html/index.html
+  expose:
+  - "80"
+ nginx:
+  image: nginx:1.9
+  volumes:
+  - ./default.conf:/etc/nginx/sites-available/default.conf
+  ports:
+  - 80:80
+  - 443:443
+
+
+
+
+
+
+
+
+
+
+
