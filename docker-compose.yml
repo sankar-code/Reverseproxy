@@ -15,7 +15,7 @@ services:
   expose:
   - "80"
  nginx:
-  image: nginx:1.9
+  image: nginx:1.12.1-alpine
   volumes:
   - ./default.conf:/etc/nginx/sites-available/default.conf
   ports:
